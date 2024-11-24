@@ -14,6 +14,9 @@ src/
 └── utils/       # Helper functions and utilities
 tests/
 └── integration/ # Integration tests
+.gitignore       # Git ignore file
+README.md        # Project documentation
+requirements.txt # Dependencies
 ```
 
 ### Key Components
