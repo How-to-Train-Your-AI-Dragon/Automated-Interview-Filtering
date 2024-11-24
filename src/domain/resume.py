@@ -1,6 +1,7 @@
 from dataclasses import dataclass
 from typing import List, Dict
 
+
 @dataclass
 class Resume:
     id: str

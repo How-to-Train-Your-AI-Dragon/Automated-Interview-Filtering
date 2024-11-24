@@ -4,6 +4,7 @@ from typing import List, Dict
 from src.domain.enums.interview_status import InterviewStatus
 from src.domain.enums.emotion_types import EmotionType
 
+
 @dataclass
 class Interview:
     id: str
@@ -21,4 +22,7 @@ class Interview:
         return self.status == InterviewStatus.COMPLETED
 
     def is_reviewable(self) -> bool:
-        return self.status in [InterviewStatus.COMPLETED, InterviewStatus.PENDING_REVIEW]
+        return self.status in [
+            InterviewStatus.COMPLETED,
+            InterviewStatus.PENDING_REVIEW,
+        ]
