@@ -160,7 +160,7 @@ The system implements comprehensive error handling for:
 - Processing errors
 
 ## Contributing
-1. Fork the repository
+1. Clone the repository
 2. Create your feature branch
 3. Commit your changes
 4. Push to the branch
