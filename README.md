@@ -77,17 +77,22 @@ cp .env.example .env
 ### Code Formatting
 We use Black for code formatting. To set up:
 
-1. Install pre-commit hooks:
+1. Install black and pre-commit:
+```bash
+pip install black pre-commit
+```
+
+2. Run pre-commit hooks:
 ```bash
 pre-commit install
 ```
 
-2. Run Black manually:
+3. Run Black manually:
 ```bash
 black .
 ```
 
-3. Configure VS Code (optional):
+4. Configure VS Code (optional):
 ```json
 {
     "python.formatting.provider": "black",
