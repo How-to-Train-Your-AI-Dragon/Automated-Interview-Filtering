@@ -100,6 +100,8 @@ black .
 }
 ```
 
+Refer to the [Black documentation](https://black.readthedocs.io/en/stable/) for more information. Reference from the article [here](https://dev.to/emmo00/how-to-setup-black-and-pre-commit-in-python-for-auto-text-formatting-on-commit-4kka)
+
 ### Git Workflow
 
 #### Creating a New Branch
