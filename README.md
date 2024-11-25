@@ -51,8 +51,8 @@ requirements.txt # Dependencies
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-username/hr-interview-analyzer.git
-cd hr-interview-analyzer
+git clone https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering.git
+cd automated-interview-filtering
 ```
 
 2. Create and activate virtual environment:
