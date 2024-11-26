@@ -9,6 +9,8 @@ app_file: src/app.py
 pinned: false
 ---
 
+[![Sync to Hugging Face hub](https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering/actions/workflows/main.yml/badge.svg)](https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering/actions/workflows/main.yml)
+
 # Automated Interview Filtering
 
 ## Overview
