@@ -2,6 +2,8 @@ name: Sync to Hugging Face hub
 on:
   push:
     branches: [main]
+
+  # to run this workflow manually from the Actions tab
   workflow_dispatch:
 
 jobs:
@@ -11,18 +13,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      
-      - name: Login to Hugging Face
+      - name: Add remote 
         env:
-          HF_TOKEN: ${{ secrets.HF }}
-        run: |
-          pip install huggingface_hub
-          huggingface-cli login --token $HF
-      
-      - name: Push to Hugging Face Spaces
+          HF: ${{ secrets.HF }}
+        run: git remote add space https://RainPoo:$HF@huggingface.co/spaces/RainPoo/Automated-Interview-Filtering
+      - name: Push to hub
         env:
-          HF_TOKEN: ${{ secrets.HF }}
-        run: |
-          huggingface-cli upload-space RainPoo/Automated-Interview-Filtering \
-            --commit-message "Automated deployment from GitHub" \
-            --create-if-not-exists
+          HF: ${{ secrets.HF }}
+        run: git push --force https://RainPoo:$HF@huggingface.co/spaces/RainPoo/Automated-Interview-Filtering main
