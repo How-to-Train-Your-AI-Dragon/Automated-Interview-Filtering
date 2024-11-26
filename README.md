@@ -1,3 +1,14 @@
+---
+title: Automated Interview Filtering
+emoji: 🐉
+colorFrom: Purple
+colorTo: Purple
+sdk: gradio
+sdk_version: "5.6.0"
+app_file: src/app.py
+pinned: false
+---
+
 # Automated Interview Filtering
 
 ## Overview
