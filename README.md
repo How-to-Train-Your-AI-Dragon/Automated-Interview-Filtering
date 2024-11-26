@@ -14,7 +14,7 @@ pinned: true
 # Automated Interview Filtering
 
 ## Overview
-The HR Interview Analysis System is an AI-powered tool that helps HR professionals streamline their interview process through automated analysis of video interviews, resumes, and candidate responses. The system leverages multiple AI technologies including emotion detection, speech-to-text conversion, and natural language processing to provide comprehensive candidate assessments.
+The Automated Interview Filtering System is an AI-powered tool that helps HR professionals streamline their interview process through automated analysis of video interviews, resumes, and candidate responses. The system leverages multiple AI technologies including emotion detection, speech-to-text conversion, and natural language processing to provide comprehensive candidate assessments.
 
 ## Architecture
 The project follows a clean, **layered monolith architecture**:
