@@ -23,13 +23,10 @@ The project follows a clean, **layered monolith architecture**:
 src/
 ├── domain/      # Core business logic and entities
 ├── service/     # Use cases and business rules
-├── frontend/    # UI and API interfaces
-└── utils/       # Helper functions and utilities
+├── utils/       # Helper functions and utilities
+└── app.py       # Frontend interface
 tests/
 └── integration/ # Integration tests
-.gitignore       # Git ignore file
-README.md        # Project documentation
-requirements.txt # Dependencies
 ```
 
 ### Key Components
@@ -39,7 +36,7 @@ requirements.txt # Dependencies
     - DeepFace for emotion analysis
     - Google Speech-to-Text for audio transcription
     - LlamaParse for resume parsing
-- **Frontend Layer**: Gradio-based user interface
+- **Frontend Interface**: Gradio-based user interface
 - **Utils**: Helper functions and utilities
 
 ## Technologies Used
