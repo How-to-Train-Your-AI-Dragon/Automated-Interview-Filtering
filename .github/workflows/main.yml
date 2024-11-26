@@ -1,0 +1,28 @@
+name: Sync to Hugging Face hub
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  sync-to-hub:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Login to Hugging Face
+        env:
+          HF_TOKEN: ${{ secrets.HF }}
+        run: |
+          pip install huggingface_hub
+          huggingface-cli login --token $HF
+      
+      - name: Push to Hugging Face Spaces
+        env:
+          HF_TOKEN: ${{ secrets.HF }}
+        run: |
+          huggingface-cli upload-space RainPoo/Automated-Interview-Filtering \
+            --commit-message "Automated deployment from GitHub" \
+            --create-if-not-exists
