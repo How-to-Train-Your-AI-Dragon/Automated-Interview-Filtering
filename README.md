@@ -1,7 +1,7 @@
 ---
 title: Automated Interview Filtering
 emoji: 🐉
-colorFrom: purple
+colorFrom: red
 colorTo: purple
 sdk: gradio
 sdk_version: "5.6.0"
