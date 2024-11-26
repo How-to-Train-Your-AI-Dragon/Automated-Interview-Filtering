@@ -1,8 +1,8 @@
 ---
 title: Automated Interview Filtering
 emoji: 🐉
-colorFrom: Purple
-colorTo: Purple
+colorFrom: purple
+colorTo: purple
 sdk: gradio
 sdk_version: "5.6.0"
 app_file: src/app.py
