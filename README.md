@@ -6,7 +6,7 @@ colorTo: purple
 sdk: gradio
 sdk_version: "5.6.0"
 app_file: src/app.py
-pinned: false
+pinned: true
 ---
 
 [![Sync to Hugging Face hub](https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering/actions/workflows/main.yml/badge.svg)](https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering/actions/workflows/main.yml)
