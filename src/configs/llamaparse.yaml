@@ -1,0 +1,7 @@
+LANGUAGE: en
+DISABLE_OCR: false
+PAGE_ROC_BBOX:
+  TOP: 0
+  RIGHT: 0
+  BOTTOM: 0
+  LEFT: 0

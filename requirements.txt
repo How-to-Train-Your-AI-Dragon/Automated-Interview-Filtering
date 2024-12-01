@@ -1,5 +1,22 @@
+# running on python 3.10.14
+
 gradio>=4.0.0
 numpy
 pandas
 python-dotenv
 black==24.10.0
+
+PyYAML==6.0.2
+tf-keras==2.18.0
+deepface==0.0.93
+python-docx==1.1.2
+llama-index==0.12.2
+opencv-python==4.10.0.84
+SpeechRecognition==3.11.0
+
+moviepy==2.1.1
+# brew install ffmpeg
+
+llama-index-llms-openai==0.3.2
+llama-index-llms-nvidia==0.3.0
+llama-index-llms-openai-like==0.3.0
