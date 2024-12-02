@@ -24,9 +24,6 @@ class ResumeParser:
             disable_ocr=config["DISABLE_OCR"],
             bounding_box=bbox,
             result_type="markdown",
-            # use_vendor_multimodal_model=True,
-            # vendor_multimodal_model_name="openai-gpt-4o-mini",
-            # vendor_multimodal_api_key=os.getenv("OPENAI_API_KEY"),
             parsing_instruction=PARSE_RESUME_PROMPT,
             is_formatting_instruction=False,
         )

@@ -1,4 +1,4 @@
 PROVIDER: openai
-BASE_URL: auto
+BASE_URL: default
 MODEL: gpt-4o-mini
 TEMPERATURE: 0

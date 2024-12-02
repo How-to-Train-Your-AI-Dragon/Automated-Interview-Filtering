@@ -3,7 +3,7 @@
 from llama_index.llms.nvidia import NVIDIA
 
 from src.llm.base_llm_provider import BaseLLMProvider
-from src.llm.enums import AUTO_LLM_API_BASE
+from src.llm.enums import DEFAULT_LLM_API_BASE
 
 
 class NvidiaLLM(BaseLLMProvider):
@@ -15,7 +15,7 @@ class NvidiaLLM(BaseLLMProvider):
     ):
         """Initiate NVIDIA client"""
 
-        if base_url == AUTO_LLM_API_BASE:
+        if base_url == DEFAULT_LLM_API_BASE:
             self._client = NVIDIA(
                 model=model,
                 temperature=temperature,

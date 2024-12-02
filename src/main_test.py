@@ -25,10 +25,12 @@ from src.sample_inputs import (
 
 
 # customise this part
-LLM_CONFIG_FILE = "./src/configs/openai.yaml"
-# LLM_CONFIG_FILE = "./src/configs/nvidia.yaml"
-RESUME_PARSER_CONFIG_FILE = "./src/configs/llamaparse.yaml"
-OUTPUT_AUDIO_FILE = "/Users/gohyixian/Downloads/test_cases/outputs/audio_output.wav"
+LLM_CONFIG_FILE = "./src/configs/llm/openai-gpt-3.5-turbo.yaml"
+# LLM_CONFIG_FILE = "./src/configs/llm/openai-gpt-4o-mini.yaml"
+# LLM_CONFIG_FILE = "./src/configs/llm/nvidia-llama-3.1-nemotron-70b-instruct.yaml"
+
+RESUME_PARSER_CONFIG_FILE = "./src/configs/parser/llamaparse_en.yaml"
+OUTPUT_AUDIO_FILE = "/Users/gohyixian/Downloads/test_cases/outputs/audio_output.wav"  # only supports .wav
 OUTPUT_REPORT_FILE = "/Users/gohyixian/Downloads/test_cases/outputs/report.docx"
 
 # init API keys as env variables
@@ -83,6 +85,8 @@ expected_keys = ["name", "score", "feedback"]
 rank_and_feedback_dict = parse_yaml_string(
     yaml_string=rank_and_feedback, expected_keys=expected_keys, cleanup=True
 )
+print(rank_and_feedback_dict)
+
 doc = Document()
 doc.add_heading(f"{rank_and_feedback_dict['name']}", 0)
 doc.add_heading(f"Overall Score: {rank_and_feedback_dict['score']}", 1)

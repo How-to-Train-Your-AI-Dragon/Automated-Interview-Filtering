@@ -85,12 +85,6 @@ class EmotionRecognition:
         for i in list(emots.keys()):
             emots[i] /= count * 100
 
-        # dominant = EmotionType.SAD
-        # for i in list(emots.keys()):
-        #     if emots[i] > emots[dominant]:
-        #         dominant = i
-        # emots["dominant"] = dominant
-
         # refactor according to custom weightage
         sad_score = emots[str(EmotionType.SAD.value)] * 1.3
         fear_score = emots[str(EmotionType.FEAR.value)] * 1.3

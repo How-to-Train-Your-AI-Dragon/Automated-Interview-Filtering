@@ -24,6 +24,8 @@ Create a <code>.env</code> file at the same directory level as this <code>ENV_SE
 
 <code>python -m src.main_test</code>
 
+You can choose to either use NVIDIA-NIMs or OpenAI as the LLM Provider. This can be changed by selecting the YAML config files in <code>src/main_test.py</code>
+
 </br>
 
 # NOTE

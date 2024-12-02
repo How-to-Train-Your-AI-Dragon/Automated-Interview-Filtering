@@ -3,7 +3,7 @@
 from llama_index.llms.openai import OpenAI
 
 from src.llm.base_llm_provider import BaseLLMProvider
-from src.llm.enums import AUTO_LLM_API_BASE
+from src.llm.enums import DEFAULT_LLM_API_BASE
 
 
 class OpenAILLM(BaseLLMProvider):
@@ -11,11 +11,11 @@ class OpenAILLM(BaseLLMProvider):
         self,
         model: str = "gpt-4o-mini",
         temperature: float = 0.0,
-        base_url: str = AUTO_LLM_API_BASE,
+        base_url: str = DEFAULT_LLM_API_BASE,
     ):
         """Initiate OpenAI client"""
 
-        if base_url == AUTO_LLM_API_BASE:
+        if base_url == DEFAULT_LLM_API_BASE:
             self._client = OpenAI(
                 model=model,
                 temperature=temperature,
