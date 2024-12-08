@@ -103,11 +103,7 @@ class EmotionRecognition:
             disgust_score,
             neutral_score,
         ]
-        min_value = min(score_list)
-        max_value = max(score_list)
-        normalized_scores = [
-            (score - min_value) / (max_value - min_value) for score in score_list
-        ]
+        normalized_scores = cls.__normalize_scores(score_list)
         mean = np.mean(normalized_scores)
 
         result_scores = [
@@ -119,11 +115,7 @@ class EmotionRecognition:
             (-disgust_score),
             neutral_score,
         ]
-        min_value = min(result_scores)
-        max_value = max(result_scores)
-        normalized_result_scores = [
-            (score - min_value) / (max_value - min_value) for score in result_scores
-        ]
+        normalized_result_scores = cls.__normalize_scores(result_scores)
         result = np.mean(normalized_result_scores)
 
         difference = abs((mean - result) / mean) * 100
@@ -137,3 +129,8 @@ class EmotionRecognition:
             conf = 50 + difference
 
         return {"mean": mean, "result": result, "conf": conf}
+
+    @classmethod
+    def __normalize_scores(cls, scores: list) -> list:
+        min_val, max_val = min(scores), max(scores)
+        return [(score - min_val) / (max_val - min_val) for score in scores]
