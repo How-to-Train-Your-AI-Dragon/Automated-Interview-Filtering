@@ -129,8 +129,7 @@ class EmotionRecognition:
         difference = abs((mean - result) / mean) * 100
 
         # keep values in range of [0, 100]
-        if difference > 50:
-            difference = 50
+        difference = min(difference, 50)
 
         if mean > result:
             conf = 50 - difference
