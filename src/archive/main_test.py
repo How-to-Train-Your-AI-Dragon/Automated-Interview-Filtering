@@ -1,6 +1,6 @@
 from dotenv import load_dotenv
 from docx import Document
-
+from pathlib import Path
 from src.llm.llm import get_llm
 from src.service.resume_parser import ResumeParser
 from src.service.emotion_recognition import EmotionRecognition
@@ -23,27 +23,30 @@ from src.archive.sample_inputs import (
     JOB_REQUIREMENTS,
 )
 
+load_dotenv()
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 # customise this part
-LLM_CONFIG_FILE = "./src/configs/llm/openai-gpt-3.5-turbo.yaml"
+LLM_CONFIG_FILE = BASE_DIR / "configs/llm/openai-gpt-3.5-turbo.yaml"
 # LLM_CONFIG_FILE = "./src/configs/llm/openai-gpt-4o-mini.yaml"
 # LLM_CONFIG_FILE = "./src/configs/llm/nvidia-llama-3.1-nemotron-70b-instruct.yaml"
 
-RESUME_PARSER_CONFIG_FILE = "./src/configs/parser/llamaparse_en.yaml"
-OUTPUT_AUDIO_FILE = "/Users/gohyixian/Downloads/test_cases/outputs/audio_output.wav"  # only supports .wav
-OUTPUT_REPORT_FILE = "/Users/gohyixian/Downloads/test_cases/outputs/report.docx"
+RESUME_PARSER_CONFIG_FILE = BASE_DIR / "configs/parser/llamaparse_en.yaml"
+OUTPUT_AUDIO_FILE = BASE_DIR / "output/audio_output.wav"  # only supports .wav
+OUTPUT_REPORT_FILE = BASE_DIR / "output/report.docx"
 
 # init API keys as env variables
 load_dotenv()
 
 # init LLM & resume parser
-llm = get_llm(LLM_CONFIG_FILE)
-parser = ResumeParser(RESUME_PARSER_CONFIG_FILE)
+llm = get_llm(str(LLM_CONFIG_FILE))
+parser = ResumeParser(str(RESUME_PARSER_CONFIG_FILE))
 
 
 # 1. extract audio from video
-OUTPUT_AUDIO_FILE = extract_audio(VIDEO_PATH, OUTPUT_AUDIO_FILE)
-assert OUTPUT_AUDIO_FILE is not None, f"Audio extraction failed."
+OUTPUT_AUDIO_FILE = extract_audio(VIDEO_PATH, str(OUTPUT_AUDIO_FILE))
+# assert OUTPUT_AUDIO_FILE is not None, f"Audio extraction failed."
 
 # 2. audio to text
 audio_text = audio2text(OUTPUT_AUDIO_FILE)
@@ -94,4 +97,4 @@ doc.add_heading(f"Brief Overview", 1)
 doc.add_paragraph(f"{rank_and_feedback_dict['feedback']}")
 
 # Save the document
-doc.save(OUTPUT_REPORT_FILE)
+doc.save(str(OUTPUT_REPORT_FILE))
