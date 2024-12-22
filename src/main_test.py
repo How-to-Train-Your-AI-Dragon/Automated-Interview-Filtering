@@ -4,7 +4,7 @@ from docx import Document
 from src.llm.llm import get_llm
 from src.service.resume_parser import ResumeParser
 from src.service.emotion_recognition import EmotionRecognition
-from src.utils.utils import (
+from src.service.utils import (
     extract_audio,
     audio2text,
     sample_frames,
@@ -16,7 +16,7 @@ from src.template.grading_prompt import (
 )
 
 # sample input values
-from src.archive.sample_inputs import (
+from src.sample_inputs import (
     VIDEO_PATH,
     RESUME_PATH,
     INTERVIEW_QUESTION,

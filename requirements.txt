@@ -1,10 +1,9 @@
 # running on python 3.10.14
 
-gradio==5.5.0
-gradio-client==1.4.2
-numpy==1.26.4
-pandas==2.2.3
-python-dotenv==1.0.1
+gradio>=4.0.0
+numpy
+pandas
+python-dotenv
 black==24.10.0
 
 PyYAML==6.0.2
@@ -21,12 +20,3 @@ moviepy==2.1.1
 llama-index-llms-openai==0.3.2
 llama-index-llms-nvidia==0.3.0
 llama-index-llms-openai-like==0.3.0
-
-firebase_admin==6.6.0
-
-llama-index-core==0.12.2
-firebase-admin==6.6.0
-uuid7==0.1.0
-llama-parse==0.5.15
-pytest==8.3.4
-pytest-mock== 3.6.1
