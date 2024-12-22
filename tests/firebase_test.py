@@ -18,6 +18,7 @@ MOCK_USER_DATA = {
         "id": "uuid7-1",
         "name": "Alice",
         "score": 90,
+        "job_title": "Software Engineer",
         "interview_question": "What are your strengths?",
         "job_requirements": "Team player",
         "feedback": "Excellent response.",
@@ -28,6 +29,7 @@ MOCK_USER_DATA = {
         "id": "uuid7-2",
         "name": "Bob",
         "score": 85,
+        "job_title": "Software Engineer",
         "interview_question": "Describe your work ethic.",
         "job_requirements": "Self-starter",
         "feedback": "Good examples provided.",
@@ -43,12 +45,13 @@ def test_write_user_data(mock_users_ref):
 
     name = "Charlie"
     score = 88
+    job_title = "Software Engineer"
     interview_question = "How do you handle challenges?"
     job_requirements = "Problem solver"
     feedback = "Well-articulated response."
 
     entry_id = write_user_data(
-        name, score, interview_question, job_requirements, feedback
+        name, score, interview_question, job_title, job_requirements, feedback
     )
 
     # Check that Firebase `set` was called with correct data
