@@ -20,4 +20,6 @@ jobs:
       - name: Push to hub
         env:
           HF: ${{ secrets.HG }}
-        run: git push --force https://RainPoo:$HF@huggingface.co/spaces/RainPoo/Automated-Interview-Filtering main
+        run: |
+          git remote set-url origin https://$HF@huggingface.co/spaces/RainPoo/Automated-Interview-Filtering
+          git push --force https://RainPoo:$HF@huggingface.co/spaces/RainPoo/Automated-Interview-Filtering main
