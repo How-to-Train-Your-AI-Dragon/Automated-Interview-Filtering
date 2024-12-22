@@ -163,3 +163,5 @@ cython_debug/
 
 # Mac cache file
 .DS_Store
+
+/src/output/audio_output.wav
