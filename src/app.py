@@ -32,6 +32,9 @@ load_dotenv()
 BASE_DIR = Path(".").resolve()
 
 LLM_CONFIG_FILE = BASE_DIR / "configs/llm/openai-gpt-3.5-turbo.yaml"
+LLM_CONFIG_FILE_NVD = (
+    BASE_DIR / "configs/llm/nvidia-llama-3.1-nemotron-70b-instruct.yaml"
+)
 RESUME_PARSER_CONFIG_FILE = BASE_DIR / "configs/parser/llamaparse_en.yaml"
 OUTPUT_AUDIO_FILE_EMPTY = BASE_DIR / "output/audio_output.wav"
 OUTPUT_REPORT_FILE_EMPTY = BASE_DIR / "output/report.docx"
