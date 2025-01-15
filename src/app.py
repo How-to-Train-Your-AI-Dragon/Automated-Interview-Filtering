@@ -110,7 +110,7 @@ class GradioInterface:
         return audio_text
 
     def analyze_emotions(self, video_path: str) -> Optional[str]:
-        frames = sample_frames(video_path, sample_rate=8)
+        frames = sample_frames(video_path, sample_rate=24)
         emotions = EmotionRecognition.detect_face_emotions(frames)
         emotions_dict = EmotionRecognition.process_emotions(emotions)
         conf_score = emotions_dict["conf"]
