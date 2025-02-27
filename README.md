@@ -9,8 +9,6 @@ app_file: src/app.py
 pinned: true
 ---
 
-[![Sync to Hugging Face hub](https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering/actions/workflows/main.yml/badge.svg)](https://github.com/How-to-Train-Your-AI-Dragon/Automated-Interview-Filtering/actions/workflows/main.yml)
-
 # Automated Interview Filtering
 
 ## Overview
@@ -147,10 +145,10 @@ The interface will be available at `http://localhost:7860`
 #### Running Tests
 ```bash
 # Run all tests
-pytest
+pytest -v tests/
 
 # Run specific test file
-pytest tests/unit/test_interview_analyzer.py
+pytest -v tests/unit/test_interview_analyzer.py
 
 # Run with coverage
 pytest --cov=src tests/
@@ -163,6 +161,7 @@ pytest --cov=src tests/
 OPENAI_API_KEY=your_key_here
 GOOGLE_SPEECH_KEY=your_key_here
 LLAMAPARSE_API_KEY=your_key_here
+FIREFLY_API_KEY=your_key_here
 ```
 
 ### Supported File Formats

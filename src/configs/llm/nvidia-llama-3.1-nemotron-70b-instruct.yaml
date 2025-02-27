@@ -1,0 +1,4 @@
+PROVIDER: nvidia
+BASE_URL: https://integrate.api.nvidia.com/v1
+MODEL: nvidia/llama-3.1-nemotron-70b-instruct
+TEMPERATURE: 0
